@@ -1,0 +1,10 @@
+version: '3'
+services:
+  caddy:
+    image: "abiosoft/caddy"
+    volumes:
+      - ./certificates:/root/.caddy  # to save certificates on disk
+      - ./Caddyfile:/etc/Caddyfile  # to mount custom Caddyfile
+    ports:
+      - "80:80"
+      - "443:443"
