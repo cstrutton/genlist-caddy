@@ -1,3 +1,7 @@
 genlist.space
 root src
-git github.com/cstrutton/genlist.git
+git {
+  repo github.com/cstrutton/genlist.git
+  hook /github-push "211546"
+}
+  
