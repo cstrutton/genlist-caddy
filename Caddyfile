@@ -1,6 +1,13 @@
-genlist.space
-root src
-git {
-  repo github.com/cstrutton/genlist.git
-  hook /webhook1 "wetyhnkkhfghdjkl;[pjgh"
+genlist.space {
+
+  root src
+  git {
+    repo github.com/cstrutton/genlist.git
+    hook /webhook1 "wetyhnkkhfghdjkl;[pjgh"
+  }
+  proxy /couchdb couch_couchdb_1:5984 {
+    transparent
+    without /couchdb
+    header_upstream x-forwarded-ssl off
+  }
 }
